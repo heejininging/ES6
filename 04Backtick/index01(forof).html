@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = ["a", "b", "c"];
+
+        for(let i in arr){
+            console.log(i); //index //0,1,2
+        }
+
+        for(let x of arr){
+            console.log(x); //value //a,b,c
+        }
+
+        //for of 응용
+        //1.
+        for(let y of "hello World"){
+            console.log(y);
+        }
+        
+        //2. 구조분해할당
+        let person = [
+            {id : "aaa", age : 11},
+            {id : "bbb", age : 20}
+        ];
+        for(let {id,age} of person){
+            console.log(id, age); //aaa 11 bbb 20
+        }
+
+        //3.  객체
+        let obj = {a: 1, b: 2};
+        for(let o of obj){
+            console.log(o); // 에러, 객체는 반복문으로 돌려야한다.
+        }
+    </script>
+</body>
+</html>
