@@ -1,0 +1,6 @@
+{
+    "liveServer.settings.port": 5501,
+    "editor.tokenColorCustomizations": {
+        "comments": "#FFF000" //주석색, 원하는색상
+    }
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //요소의 값을 쉽게 가져올 수 있다.
+        let arr = [1,2,3,4];
+        // let a1 = arr[0];
+        // let a2 = arr[1];
+
+        let [a,b,c,d] = arr;
+        console.log(a); //1
+        console.log(b); //2
+        console.log(c); //3
+        console.log(d); //4
+
+        //일부의 값을 가져오는 경우
+        let [a1,a2] = arr;
+        console.log(a1,a2); //1,2
+        // 중간에 있는 값만 가져오는 경우, 공백
+        let [k1, , ,k4] = arr;
+        console.log(k1,k4); //1,4
+
+
+        //전개구문
+        let [y1, ...y2] = arr;
+        console.log(y1,y2); //1,[2,3,4]
+
+        let [...arr2] = arr;
+        console.log(arr2); //[1,2,3,4]
+
+
+        //
+        function useState(){
+            return [1,function(){}];
+        }
+
+        let [n1,n2] = useState();
+        console.log(n1,n2); //1, ƒ (){}
+    </script>
+</body>
+</html>
