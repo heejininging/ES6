@@ -19,22 +19,24 @@
         console.log(b); //Object
         console.log({b}); //{num: 2, title: 'bye', info: Array(3), profile: {…}}
 
+
+        //예시문제풀기
+
         //두번째 객체의 num,title키 가지고오기
         let [,{num,title}] = list;
         console.log(num,title); //2 'bye'
         //두번째 객체의 profile
         let [,{profile}] = list;
         console.log(profile);
-
         //첫번째 객체의 info를 다른이름으로 가지고 나오기
         let [{info : aaa},] = list;
         console.log(aaa);
-
         //두번째 객체의 info배열의 첫번째요소만 가져오기
         let [,{info: [y1]}] = list;
         console.log(y1);
-        let [,{profile: {birth : m1}}] = list;
-        console.log(m1);
+        //두번째 객체의 profile객체 안의 birth값을 가져오기
+        let [,{profile: {birth}}] = list;
+        console.log(birth);
     </script>
 </body>
 </html>
